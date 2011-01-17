@@ -1,0 +1,5 @@
+<p style='font: Arial,Helvetica; size: 10pt;'>Hello, {{ username }}.</p>
+<p style='font: Arial,Helvetica; size: 10pt;'>Thank you for submitting your photo to our site.</p>
+<p style='font: Arial,Helvetica; size: 10pt;'>You can view it by <a href="{{ url }}">clicking here</a></p>
+<p style='font: Arial,Helvetica; size: 10pt;'>Regards,</p>
+<p style='font: Arial,Helvetica; size: 10pt;'><em>django PhotoUploader</em></p>

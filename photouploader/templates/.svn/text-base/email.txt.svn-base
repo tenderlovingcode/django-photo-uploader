@@ -1,0 +1,8 @@
+Hello {{ username }},
+
+Thank you for submitting your photo to our site.
+
+You can view it at the following URL: {{ url }}
+
+Regards,
+django PhotoUploader.

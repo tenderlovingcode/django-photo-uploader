@@ -1,0 +1,26 @@
+# Create your views here.
+from django.http import HttpResponse
+from django.template.loader import get_template
+from django.template import Context
+
+from PhotoUpload import settings
+from core.models import Photo, PhotoForm
+from settings import IMAGE_URL 
+
+
+def index(request):
+	t = get_template('main.html')
+	html = t.render(Context({'email':'you@yourdomain.com'}))
+	return HttpResponse(html)
+
+def previewYourImages(request,id):
+	p = Photo.objects.get(receipt=id)
+	pForm = PhotoForm(instance=p)
+	t = get_template('main.html')
+	#html = t.render(Context({'image': baseUrl % p.image}))
+	html = t.render(Context({'url': IMAGE_URL + p.image.name, 'form':pForm}))
+	return HttpResponse(html)
+
+#save your photo details
+def save(request):
+	pass

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Your Photo</title>
+	<script type="text/javascript">
+	(function(){
+		if(window.location.search == "" && navigator.geolocation)
+			navigator.geolocation.getCurrentPosition(function(pos){
+				window.location.href = "?lat="+pos.coords.latitude+"&long="+pos.coords.longitude;
+			},function(){ alert('failed to get location!')});
+	})();
+	</script>
+</head>
+<body>
+{% if photo.latitude and photo.longitude %}
+You are here!<br/>
+<img src="http://maps.google.com/maps/api/staticmap?center={{photo.latitude}},{{photo.longitude}}&amp;zoom=15&amp;size=320x350&amp;markers=color:red|52.50261871,13.411874715&amp;sensor=false" />
+{% else %}
+geo-tagging your photo..
+<!--<img src="{{ photo.image.url }}" />-->
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,8 @@
+Hello,
+
+Thank you for submitting your photo to our site.
+
+Please geo-tag it at the following URL: {{ url }}
+
+Regards,
+django PhotoUploader.
