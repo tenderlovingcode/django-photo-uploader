@@ -32,7 +32,7 @@ To Install:
 		IMAP_USER				imap username
 		IMAP_PSWD				imap password
 
-		UPLOAD_EMAIL_FROM = "upload@willperkins.com"
+		UPLOAD_EMAIL_FROM = "upload@yourdomain.com"
 		UPLOAD_EMAIL_SUBJECT = "your uploaded photo"
 		
 
