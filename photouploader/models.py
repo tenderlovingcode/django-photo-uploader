@@ -1,5 +1,4 @@
 from django.db import models
-from django.forms import ModelForm
 
 from random import random
 from hashlib import md5
